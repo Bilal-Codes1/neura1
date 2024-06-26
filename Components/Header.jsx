@@ -14,7 +14,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
-} from "@/components/ui/navigation-menu";
+} from "../components/ui/navigation-menu";
 import { useState } from "react";
 
 const Header = () => {

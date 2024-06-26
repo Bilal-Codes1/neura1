@@ -15,13 +15,17 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "../Components/ui/navigation-menu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
-  menu
-    ? (document.body.style.overflow = "hidden")
-    : (document.body.style.overflow = "auto");
+  useEffect(() => {
+    if (menu) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [menu]);
 
   return (
     <>
@@ -34,7 +38,7 @@ const Header = () => {
               <NavigationMenuItem className="py-2 px-4 text-white text-[13px] nav-item rounded-lg cursor-pointer">
                 <NavigationMenuTrigger>Prodcuts</NavigationMenuTrigger>
                 <NavigationMenuContent className="w-[500px] h-[300px] bg-background text-white border border-[#383e80] rounded-3xl">
-                  <NavigationMenuLink className="grid grid-rows-3 px-6 py-6 gap-8">
+                  <NavigationMenuLink className="grid grid-rows-3 px-6 py-6 gap-4">
                     <div className="flex gap-3 items-center link py-1 rounded-xl">
                       <Image
                         src="https://cdn.prod.website-files.com/663d3f8682c97f3fefb18f1a/663d3f8682c97f3fefb197f8_Talent.svg"
@@ -44,7 +48,7 @@ const Header = () => {
                       />
                       <div className="flex flex-col">
                         <h3 className="text-xl">Talent</h3>
-                        <span className="text-lg text-[#B2B2C1]">
+                        <span className="text-md text-[#B2B2C1]">
                           Hire world-class engineers for your core team
                         </span>
                       </div>
@@ -58,7 +62,7 @@ const Header = () => {
                       />
                       <div className="flex flex-col">
                         <h3 className="text-xl">gpt-vetting</h3>
-                        <span className="text-lg text-[#B2B2C1]">
+                        <span className="text-md text-[#B2B2C1]">
                           The first ever AI interviewer
                         </span>
                       </div>
@@ -72,7 +76,7 @@ const Header = () => {
                       />
                       <div className="flex flex-col">
                         <h3 className="text-xl">microLab</h3>
-                        <span className="text-lg text-[#B2B2C1]">
+                        <span className="text-md text-[#B2B2C1]">
                           A managed extension to your engineering team
                         </span>
                       </div>

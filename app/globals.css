@@ -87,6 +87,10 @@ body {
   font-family: "Outfit", sans-serif;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 .nav-item:hover {
   background-image: radial-gradient(circle farthest-corner at 50% 50%,
       rgba(56, 62, 128, 0.14),

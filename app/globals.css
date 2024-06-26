@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background
+  }
+
+  body,
+  html {
+    @apply overflow-x-hidden
+  }
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+body {
+  color: white;
+  font-family: "Outfit", sans-serif;
+}
+
+.nav-item:hover {
+  background-image: radial-gradient(circle farthest-corner at 50% 50%,
+      rgba(56, 62, 128, 0.14),
+      #1f2343);
+}
+
+.products {
+  background-image: radial-gradient(circle farthest-corner at 50% 50%,
+      rgba(56, 62, 128, 0.14),
+      #1f2343);
+}
+
+.button {
+  background-image: linear-gradient(93deg, #3444da 20%, #3260d7 87%);
+  box-shadow: inset 0 0 9px rgba(255, 255, 255, 0.2);
+}
+
+.second-button {
+  box-shadow: inset 0 0 9px rgba(255, 255, 255, 0.2);
+}
+
+.second-button:hover {
+  background-image: linear-gradient(93deg, #3444da 20%, #3260d7 87%);
+}
+
+.link:hover {
+  background-image: radial-gradient(circle farthest-corner at 50% 50%,
+      #383e8024,
+      #1f2343);
+}
+
+.gradient {
+  background-image: linear-gradient(155deg, #1a68ff 17%, #aec0ff 80%);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.bg {
+  box-shadow: inset 0 0 0 2px #1f2343;
+}
+
+.line-1 {
+  stroke-dasharray: 450;
+  stroke-dashoffset: -450;
+  transition: all 0.5s ease;
+  stroke: #8699ff;
+  width: clamp(60px, 40vw, 430px);
+}
+
+.line-2 {
+  stroke-dasharray: 450;
+  stroke-dashoffset: 450;
+  transition: all 0.5s ease;
+  stroke: #8699ff;
+  width: clamp(60px, 40vw, 430px);
+}
+
+.line-3 {
+  stroke-dasharray: 200;
+  stroke-dashoffset: -200;
+  transition: all 0.5s ease;
+  width: clamp(40px, 15vw, 200px);
+}
+
+.line-4 {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: all 0.5s ease;
+  width: clamp(40px, 15vw, 200px);
+}
+
+.logos-slide {
+  animation: scroll 5s infinite linear;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.test-1 {
+  background-image: linear-gradient(180deg,
+      rgb(255 255 255 / 0%),
+      rgb(31 35 67 / 52%));
+}
+
+.hero {
+  font-size: clamp(20px, 8vw, 88px);
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+.test-2 {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(31, 35, 67, 0.52));
+}
+
+.play {
+  height: clamp(100px, 15vw, 300px);
+  width: clamp(100px, 15vw, 300px);
+}
+
+.faq {
+  font-size: clamp(24px, 5vw, 50px);
+}
